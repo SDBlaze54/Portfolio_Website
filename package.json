@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  },
+  "scripts": {
+    "export:gh-pages": "npm run build && touch ./out/.nojekyll",
+    "tailwind:run": "npx @tailwindcss/cli -i ./public/style.css -o ./output/output.css --watch"
+  }
+}
