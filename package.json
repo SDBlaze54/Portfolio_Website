@@ -4,7 +4,7 @@
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
-    "export:gh-pages": "npm run build && touch ./out/.nojekyll",
+    "export:gh-pages": "npm run build && touch ./output/.nojekyll",
     "tailwind:run": "npx @tailwindcss/cli -i ./public/style.css -o ./output/output.css --watch"
   }
 }
