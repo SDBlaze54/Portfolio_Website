@@ -7,7 +7,7 @@
     "build": "npx tailwindcss -i ./style.css -o ./output/output.css --minify",
     "start": "npx tailwindcss -i ./style.css -o ./output/output.css --watch",
     "predeploy": "npm run build && npm run export:gh-pages",
-    "deploy": "gh-pages -d output",
+    "deploy": "touch ./output_folder/.nojekyll && gh-pages -d output_folder -t true",
     "export:gh-pages": "npm run build && touch ./output/.nojekyll",
     "tailwind:run": "npx @tailwindcss/cli -i ./style.css -o ./output/output.css --watch"
   }
