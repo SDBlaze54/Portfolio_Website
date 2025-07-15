@@ -1,10 +1,14 @@
-{
+{"homepage": "https://sdblaze54.github.io/Portfolio_Website/",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
+    "build": "npx tailwindcss -i ./style.css -o ./output/output.css --minify",
+    "start": "npx tailwindcss -i ./style.css -o ./output/output.css --watch",
+    "predeploy": "npm run build && npm run export:gh-pages",
+    "deploy": "gh-pages -d output",
     "export:gh-pages": "npm run build && touch ./output/.nojekyll",
-    "tailwind:run": "npx @tailwindcss/cli -i ./public/style.css -o ./output/output.css --watch"
+    "tailwind:run": "npx @tailwindcss/cli -i ./style.css -o ./output/output.css --watch"
   }
 }
